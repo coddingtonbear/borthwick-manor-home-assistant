@@ -70,4 +70,8 @@ notify twoline:
   name: Twoline
   platform: twoline
   resource: http://127.0.0.1:6224/message/hass/
+  color:
+    red: 0
+    green: 0
+    blue: 255
 
