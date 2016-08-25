@@ -67,7 +67,11 @@ class TwolineNotificationService(BaseNotificationService):
         }
 
         if self._color:
-            data['color'] = self._color
+            data['color'] = [
+                self._color['red'],
+                self._color['green'],
+                self._color['blue'],
+            ]
 
         if self._expires:
             data['expires'] = self._expires
