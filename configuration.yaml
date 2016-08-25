@@ -66,9 +66,8 @@ media_player sleepsoundsbot:
   server: sleepsoundsbot.local
   location: Adam & TJ's Bedroom
 
-#notify twoline:
-#  name: Twoline
-#  platform: rest
-#  resource: http://127.0.0.1:6224/message/hass/
-#  method: POST_JSON
+notify twoline:
+  name: Twoline
+  platform: twoline
+  resource: http://127.0.0.1:6224/message/hass/
 
