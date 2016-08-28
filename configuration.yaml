@@ -80,7 +80,20 @@ automation:
       event_data:
         message: "stop svxlink"
     action:
-      service: notify.twoline
-      data:
+      - service: notify.twoline
+        data:
         message: "Stopping SVXLink"
-      
+      - service: switch.turn_off
+        entity_id: switch.SVXLink Repeater
+  - alias: Start SVXLink
+    trigger:
+      platform: event
+      event_type: keyboard_command
+      event_data:
+        message: "start svxlink"
+    action:
+      - service: notify.twoline
+        data:
+        message: "Starting SVXLink"
+      - service: switch.turn_on
+        entity_id: switch.SVXLink Repeater
