@@ -11,9 +11,6 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Los_Angeles
 
-# Show links to resources in log and frontend
-introduction:
-
 # Enables the frontend
 frontend:
 
@@ -75,3 +72,13 @@ notify twoline:
     green: 0
     blue: 255
 
+automation:
+  - alias: Forward custom events to Notify
+    trigger:
+      platform: event
+      event_type: keyboard_command
+    action:
+      service: notify.twoline
+      data:
+        message: "MSG: {{message}}"
+      
