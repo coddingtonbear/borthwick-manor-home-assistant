@@ -82,7 +82,7 @@ automation:
     action:
       - service: notify.twoline
         data:
-        message: "Stopping SVXLink"
+          message: "Stopping SVXLink"
       - service: switch.turn_off
         entity_id: switch.SVXLink Repeater
   - alias: Start SVXLink
@@ -94,6 +94,6 @@ automation:
     action:
       - service: notify.twoline
         data:
-        message: "Starting SVXLink"
+          message: "Starting SVXLink"
       - service: switch.turn_on
         entity_id: switch.SVXLink Repeater
