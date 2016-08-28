@@ -73,12 +73,14 @@ notify twoline:
     blue: 255
 
 automation:
-  - alias: Forward custom events to Notify
+  - alias: Stop SVXLink
     trigger:
       platform: event
       event_type: keyboard_command
+      event_data:
+        message: "stop svxlink"
     action:
       service: notify.twoline
       data:
-        message: "MSG: {{message}}"
+        message: "Stopping SVXLink"
       
